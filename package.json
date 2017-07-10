@@ -10,7 +10,7 @@
     "deployGithub": "git add .; git commit -m 'Automatic deploy to Heroku'; git push https://github.com/adrianviljur/test.git +HEAD:master"
 
   },
-  "author": "",
+  "author": "Adrian Vilaseco",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
