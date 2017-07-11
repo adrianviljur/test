@@ -50,7 +50,6 @@ angular
 			}
 			if ( i==0 && (string.charAt(0) == "*")){
 			    calculatorAux.push(string.charAt(i));
-			    console.log("here comes *");
 			}
 		    }
 		    console.log(calculatorAux);
@@ -95,8 +94,52 @@ angular
 		    });;
 		};
 		//TASK 2
+		
+		var auxiliar = "";
+		function aux(string){
+			if (string == ""){
+				return "";
+			}
+			if(isSorted(string)){
+				    $scope.outTask2 = string;
+			}else{
+			if(Number(string.charAt(0)) < Number(string.charAt(1))){
+				      console.log(string.charAt(0)+" is lesser than "+string.charAt(1));
+					auxiliar = auxiliar.concat(string.charAt(0));
+					console.log(string.substring(1,string.length));
+					aux(string.substring(1,string.length));
+			} else {
+				auxiliar = auxiliar.concat((Number(string.charAt(0))-1).toString());
+				
+				console.log(auxiliar);
+				for (var j=0;j<string.length-1;j++){
+					auxiliar = auxiliar.concat("9");
+				}
+				console.log(auxiliar);
+				aux(auxiliar);
+			}
+			
+			auxiliar = "";
+			}
+			return true;
+		}
+		function isSorted(number){
+			for (var x = 0; x < number.length - 1; x++) {
+			        if (Number(number.charAt(x+1)) < Number(number.charAt(x))) {
+			            return false;
+			        }
+				}
+			return true;
+		}
+		
+		
+		
 		$scope.runTask2 = function(){
-			$scope.outTask2 = "...input empty!";
+			var number = $scope.task2_input;
+			//for (var z=0;z<number.length;z++){
+			aux(number);
+			//}
+			
 		};
 		//TASK 3
 		$scope.runTask3 = function(){
