@@ -1,7 +1,7 @@
 <html ng-app="testApp">
       
       <head>
-            
+            <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
             <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
             <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
             <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -12,11 +12,60 @@
       </head>
       
       <body ng-controller="testController">
-            
-            <h1>Hello world from HTML</h1>  
-            <h1>------------------------------------</h1>
-            <h1>{{helloWorld}}</h1>
-         
+            <div class="container">
+                  <h1>Adrian Vilaseco Test for AudioCC</h1>
+                  <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th colspan="3"><h2>Here comes the solutions!</h2></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                               
+                                <th colspan="3" class="info">Task 1</th>
+                                
+                              </tr>
+                              <tr>
+                                <td width="50">Input:</td>
+                                <td><input class="form-control" ng-model="task1_input"/></td>
+                                <td><center><button id="addButton" ng-click="runTask1()" class="btn btn-primary">Run</button></center></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td colspan="2" >Output: {{outTask1}}</td>
+                              </tr>
+                              <tr>
+                                
+                                <th colspan="3" class="info">Task 2</th>
+                                
+                              </tr>
+                              <tr>
+                                <td width="50">Input:</td>
+                                <td><input class="form-control" ng-model="task2_input"/></td>
+                                <td><center><button id="addButton" ng-click="runTask2()" class="btn btn-primary">Run</button></center></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td colspan="2">Output: {{outTask2}}</td>
+                              </tr>
+                              <tr>
+                                
+                                <th colspan="3" class="info">Task 3</th>
+                                
+                              </tr>
+                              <tr>
+                                <td width="50">Input:</td>
+                                <td><input class="form-control" ng-model="task3_input"/></td>
+                                <td><center><button id="addButton" ng-click="runTask3()" class="btn btn-primary">Run</button></center></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td colspan="2">Output: {{outTask3}}</td>
+                              </tr>
+                            </tbody>
+                    </table>
+            </div>
       </body>
 </html>
 
